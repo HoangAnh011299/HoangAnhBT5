@@ -52,12 +52,12 @@ function ketQua() {
 function tongKySoTag() {
     var soCo2ChuSo = document.getElementById("nhapSoCo2ChuSo").value*1;
     
-    hangDonVi = soCo2ChuSo%10
+    var hangDonVi = soCo2ChuSo%10
     console.log(" 😂 ~ hangDonVi", hangDonVi);
-    hangChuc = Math.floor(soCo2ChuSo/10);
+   var hangChuc = Math.floor(soCo2ChuSo/10);
     console.log(" 😂 ~ hangChuc", hangChuc);
     
-    ketQuaKySo = hangDonVi + hangChuc;
-    ketQuaKySo.innerHTML = ketQuaKySo;
+    var ketQuaKySo = hangDonVi + hangChuc;
+    document.getElementById('ketQuaKySo').innerHTML = ketQuaKySo;
     
 }
