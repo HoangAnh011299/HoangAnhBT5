@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="nav nav-pills nav-justified">
+        <a class="nav-link active" href="step1">Bài tập 1</a>
+        <a class="nav-link" href="step2">Bài tập 2</a>
+        <a class="nav-link" href="step3">Bài tập 3</a>
+        <a class="nav-link disabled" href="#">Bài tập 4</a>
+      </nav>
+    <!-- BÀI TẬP 1 -->
+    <div class="tab-content py-4" id="nav-tabContent">
+      <div class="form-group p-5" id="step1" >
+        <div>
+         <h4>BÀI TẬP 1: Viết trương trình tính lương nhân viên:</h4>
+         <div class="form-group w-50">
+             <p>Tiền lương 1h</p>
+             <input id="tienLuong1h" class="form-control w25">
+         </div>
+         <br>
+         <div class="form-group w-50">
+             <p>Số giờ làm</p>
+             <input id="soGioLam" class="form-control w25">
+         </div>
+         <br> 
+         <button onclick="tinhTongLuong()" id="btnTinhTien" class="btn btn-outline-success" >Tính tiền</button>
+         <div class="mt-2 alert alert-success w-50">
+             kết quả: <span id="TongLuong"></span>
+         </div>
+        </div>
+     </div>
+     <!-- BÀI TẬP 2 -->
+     <div class="form-group p-5" id="step2">
+      <h3>BÀI TẬP 2: Đề bài: Tính giá trị trung bình của 5 số thực và xuất ra màn hình</h3>
+      <div>
+        <h3>Số thực 1:</h3>
+      <input class="form-control w-50 m-lg-4" id="soThuc1">
+      </div>
+     <div>
+        <h3>Số thực 2:</h3>
+        <input class="form-control w-50 m-lg-4" id="soThuc2">
+     </div>
+     <div>
+        <h3>Số thực 3:</h3>
+        <input class="form-control w-50 m-lg-4" id="soThuc3">
+     </div>
+     <div>
+        <h3>Số thực 4:</h3>
+        <input class="form-control w-50 m-lg-4" id="soThuc4">
+     </div>
+     <div>
+        <h3>Số thực 5:</h3>
+        <input class="form-control w-50 m-lg-4" id="soThuc5">
+     </div>
+      <div>
+        <span>Giá trị trung bình của 5 số thực là:</span>
+        <label for="first_name" id="xuatGiaTriTrungBinh"> </label>
+      </div>
+      <div class="row justify-content-end">
+        <div class="col-auto">
+          <button class="btn btn-outline-success" data-enchanter="next" onclick="XuatKetQua()">Xuất kết quả</button>
+        </div>
+        </div>
+     </div>
+     <!-- BÀI TẬP 3 -->
+     <div class="form-group p-5" id="step3" > 
+      <h3>Bài tập 3</h3>
+      <div class="mb-3">
+        <h3>Nhập vào số tiền $:</h3>
+        <input class="w-50" id="quyDoi" placeholder="Nhập vào số tiền đô">
+      </div>
+      <button class="btn btn-outline-success" onclick="quyDoiTien()">Quy đổi</button>
+      <br>
+      <div class="mt-2 alert alert-success w-50">
+        Giá trị quy đổi sang tiền việt là: <span id="ketQua"></span>
+      </div>
+     </div>
+    </div>
+
+    <!-- BÀI TẬP 4 -->
+
+    <div class="form-group p-5" id="step3">
+      <h3>Bài tập 4</h3>
+      <div>
+        <p>Chiều dài hình chữ nhật</p>
+        <input class="form-control w-50" id="chieuDaiHinhChuNhat" placeholder="Chiều dài">
+      </div>
+      <div>
+        <p>Chiều rộng hình chữ nhật</p>
+        <input class="form-control w-50" id="chieuRongHinhChuNhat" placeholder="Chiều rộng">
+      </div>
+      <br>
+      <button class="btn btn-outline-success" onclick="ketQua()">Kết Quả</button>
+
+      <div class="mt-2 alert alert-success w-50">
+        Diện tích hình chữ nhật là: <span id="dienTich"></span>
+      </div>
+      <div class="mt-2 alert alert-success w-50">
+        Chu vi hình chữ nhật là: <span id="chuVi"></span>
+      </div>
+
+    </div>
+    
+    <!-- Bài tập 5 -->
+
+    <div class="form-group p-5" id="step5" > 
+      <h3>Bài tập 5</h3>
+      <div class="mb-3">
+        <h3>Nhập số có 2 chữ số:</h3>
+        <input class="w-50" id="nhapSoCo2ChuSo" placeholder="Nhập số bất kì có 2 chữ số">
+      </div>
+      <button class="btn btn-outline-success" onclick="tongKySoTag()">Chạy kết quả</button>
+      <br>
+      <div class="mt-2 alert alert-success w-50">
+        Tổng 2 ký số vừa nhập là: <span id="ketQuaKySo"></span>
+      </div>
+     </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./gTTB.js"></script>
+  </body>
+  
+</html>
